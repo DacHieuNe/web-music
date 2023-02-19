@@ -1,0 +1,15 @@
+@mixin text(
+  $font-size: 16px,
+  $line-height: initial,
+  $color: #fff,
+  $display: inline-block
+) {
+  display: $display;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin taga($display: inline-block) {
+  display: $display;
+  text-decoration: none;
+}

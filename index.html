@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhạc Remix EDM Việt</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./src/assets/images/favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/utils/slick-1.8.1/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      href="./src/utils/slick-1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/assets/styles/reset.css" />
+    <link rel="stylesheet" href="./src/assets/styles/base.css" />
+    <link rel="stylesheet" href="./src/assets/styles/home.css" />
+  </head>
+  <body class="color-main">
+    <template id="song-list">
+      <li class="remix__body-song-list-item">
+        <div class="remix__body-song-list-box">
+          <div class="remix__body-song-list-item-image">
+            <a href="">
+              <img src="" alt="album-1" />
+              <h3 class="remix__body-song-list-item-time"></h3>
+            </a>
+          </div>
+          <div class="remix__body-song-list-item-info">
+            <a href="" class="remix__body-song-list-item-info-link">
+              <h2></h2>
+              <h4 class="text-effect"></h4>
+            </a>
+          </div>
+          <div class="remix__body-song-list-item-view">
+            <span></span>
+          </div>
+        </div>
+      </li>
+    </template>
+    <div id="loader">
+      <div class="about">
+        <a
+          class="bg_links social portfolio"
+          href="https://www.rafaelalucas.com"
+          target="_blank"
+        >
+          <span class="icon"></span>
+        </a>
+        <a
+          class="bg_links social dribbble"
+          href="https://dribbble.com/rafaelalucas"
+          target="_blank"
+        >
+          <span class="icon"></span>
+        </a>
+        <a
+          class="bg_links social linkedin"
+          href="https://www.linkedin.com/in/rafaelalucas/"
+          target="_blank"
+        >
+          <span class="icon"></span>
+        </a>
+        <a class="bg_links logo"></a>
+      </div>
+      <div class="content">
+        <div class="planet">
+          <div class="ring"></div>
+          <div class="cover-ring"></div>
+          <div class="spots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <p>Vui lòng đợi ít giây để trải nghiệm nghe nhạc được tốt hơn</p>
+      </div>
+    </div>
+    <header>
+      <section class="music">
+        <div class="container px-10">
+          <div class="row align-center">
+            <div class="col">
+              <div class="music__link">
+                <a href="" class="text-effect">MUSIC REMIX</a>
+              </div>
+            </div>
+            <div class="col f-grow-1 music__order col-md-12">
+              <nav>
+                <ul class="music__list">
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">Nhạc Mashup</a>
+                  </li>
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">Nhạc Nonstop</a>
+                  </li>
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">Nhạc Remix Việt</a>
+                  </li>
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">Nonstop Remix Việt</a>
+                  </li>
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">China Mix</a>
+                  </li>
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">Electro House Mix</a>
+                  </li>
+                  <li class="music__list-item">
+                    <a href="" class="text-effect">Nhạc EDM</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col f-grow-1 col-xl-none col-md-block">
+              <div class="music__menu text-right-md">
+                <button id="button__music-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- remix__body-song-list-item-active -->
+    <main>
+      <section class="remix">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 col-md-12">
+              <div class="remix__body">
+                <form id="search-form" action="">
+                  <div class="remix__body-search">
+                    <input type="text" placeholder="Nhập từ khóa tìm kiếm..." />
+                    <button>Tìm kiếm</button>
+                  </div>
+                </form>
+                <div class="remix__body-slider">
+                  <div>
+                    <a href="" class="remix__body-slider-link">
+                      <img
+                        src="src/assets/images/slider-1.jpg"
+                        alt="slider-1"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="" class="remix__body-slider-link">
+                      <img
+                        src="src/assets/images/slider-2.jpg"
+                        alt="slider-2"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="" class="remix__body-slider-link">
+                      <img
+                        src="src/assets/images/slider-3.jpg"
+                        alt="slider-3"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="" class="remix__body-slider-link">
+                      <img
+                        src="src/assets/images/slider-4.jpg"
+                        alt="slider-4"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="" class="remix__body-slider-link">
+                      <img
+                        src="src/assets/images/slider-5.jpg"
+                        alt="slider-5"
+                      />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="" class="remix__body-slider-link">
+                      <img
+                        src="src/assets/images/slider-6.jpg"
+                        alt="slider-6"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="remix__body-hi">
+                  <p>Chúc các bạn nghe nhạc vui vẻ nha ! &hearts;</p>
+                </div>
+                <div class="remix__body-album">
+                  <h3 class="remix__notes-topic-title">PLAYLIST HOT NHẤT</h3>
+                  <ul class="remix__body-album-list">
+                    <li class="remix__body-album-list-item">
+                      <a href="">
+                        <img
+                          src="src/assets/images/album-1.jpg"
+                          alt="album-1"
+                        />
+                        <div class="remix__body-album-box">
+                          Hết Thương Cạn Nhớ Remix - Đức Phúc 05:00
+                        </div>
+                      </a>
+                    </li>
+                    <li class="remix__body-album-list-item">
+                      <a href="">
+                        <img
+                          src="src/assets/images/album-2.jpg"
+                          alt="album-2"
+                        />
+                        <div class="remix__body-album-box">
+                          Chạm Khẽ Tim Anh Một Chút Thôi - Noo Phước Thịnh 05:46
+                        </div>
+                      </a>
+                    </li>
+                    <li class="remix__body-album-list-item">
+                      <a href="">
+                        <img
+                          src="src/assets/images/album-3.jpg"
+                          alt="album-3"
+                        />
+                        <div class="remix__body-album-box">
+                          Lạc Trôi - Sơn Tùng MTP 04:21
+                        </div>
+                      </a>
+                    </li>
+                    <li class="remix__body-album-list-item">
+                      <a href="">
+                        <img
+                          src="src/assets/images/album-4.jpg"
+                          alt="album-4"
+                        />
+                        <div class="remix__body-album-box">
+                          Con Trai Cưng - B Ray 02:38
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="remix__body-song">
+                  <h3
+                    class="remix__notes-topic-title remix__notes-topic-song-title"
+                  >
+                    NHẠC TRẺ
+                  </h3>
+                  <ul class="remix__body-song-list"></ul>
+                </div>
+                <div class="remix__body-song">
+                  <h3
+                    class="remix__notes-topic-title remix__notes-topic-song-title not-border"
+                  >
+                    RAP VIỆT
+                  </h3>
+                  <ul class="remix__body-rap-list"></ul>
+                </div>
+                <div class="remix__body-song">
+                  <h3
+                    class="remix__notes-topic-title remix__body-author-title not-border"
+                  >
+                    WEEKLY ARTIST CHART
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </h3>
+                  <ul class="remix__body-author-list">
+                    <li class="remix__body-author-list-item">
+                      <a>
+                        <img src="src/assets/images/author-1.jpg" alt="1" />
+                        <h4>O.lew (Việt Nam)</h4>
+                      </a>
+                    </li>
+                    <li class="remix__body-author-list-item">
+                      <a>
+                        <img src="src/assets/images/author-2.jpg" alt="2" />
+                        <h4>Huỳnh James</h4>
+                      </a>
+                    </li>
+                    <li class="remix__body-author-list-item">
+                      <a>
+                        <img src="src/assets/images/author-3.jpg" alt="3" />
+                        <h4>Masew</h4>
+                      </a>
+                    </li>
+                    <li class="remix__body-author-list-item">
+                      <a>
+                        <img src="src/assets/images/author-4.jpg" alt="4" />
+                        <h4>UMIE</h4>
+                      </a>
+                    </li>
+                    <li class="remix__body-author-list-item">
+                      <a>
+                        <img src="src/assets/images/author-5.jpg" alt="5" />
+                        <h4>Đình Phước</h4>
+                      </a>
+                    </li>
+                    <li class="remix__body-author-list-item">
+                      <a>
+                        <img src="src/assets/images/author-6.jpg" alt="6" />
+                        <h4>Issac</h4>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 pl-xl-0 mt-xl-10 col-md-12">
+              <div class="remix__notes">
+                <div class="remix__notes-page">
+                  <div class="remix__notes-page-img">
+                    <a
+                      href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                      target="_blank"
+                    >
+                      <img src="src/assets/images/nhuy.jpg" alt="nhuy" />
+                    </a>
+                  </div>
+                  <div class="remix__notes-page-contact">
+                    <a
+                      href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                      target="_blank"
+                      class="remix__notes-page-contact-name"
+                    >
+                      Trương Đắc Hiếu
+                    </a>
+                    <h3 class="remix__notes-page-contact-follow">
+                      <a
+                        href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-square-facebook"></i>
+                        Theo dõi Facebook
+                      </a>
+                      16.041 Followers
+                    </h3>
+                  </div>
+                </div>
+                <div class="remix__notes-evaluate">
+                  <h3>ĐÁNH GIÁ WEBSITE</h3>
+                  <ul class="remix__notes-evaluate-list">
+                    <li class="remix__notes-evaluate-list-item" data-id="0">
+                      <i class="fa-solid fa-star"></i>
+                    </li>
+                    <li class="remix__notes-evaluate-list-item" data-id="1">
+                      <i class="fa-solid fa-star"></i>
+                    </li>
+                    <li class="remix__notes-evaluate-list-item" data-id="2">
+                      <i class="fa-solid fa-star"></i>
+                    </li>
+                    <li class="remix__notes-evaluate-list-item" data-id="3">
+                      <i class="fa-solid fa-star"></i>
+                    </li>
+                    <li class="remix__notes-evaluate-list-item" data-id="4">
+                      <i class="fa-solid fa-star"></i>
+                    </li>
+                  </ul>
+                  <span class="remix__notes-evaluate-statistic">
+                    3.6 / 24 Phiếu
+                  </span>
+                </div>
+                <div class="remix__notes-topic">
+                  <h3 class="remix__notes-topic-title">NHẠC THEO CHỦ ĐỀ</h3>
+                  <ul class="remix__notes-topic-list">
+                    <li class="remix__notes-topic-list-item">
+                      <a href="" class="text-effect">Nhạc Remix</a>
+                    </li>
+                    <li class="remix__notes-topic-list-item">
+                      <a href="" class="text-effect">Nonstop Việt</a>
+                    </li>
+                    <li class="remix__notes-topic-list-item">
+                      <a href="" class="text-effect">Nhạc DJ</a>
+                    </li>
+                    <li class="remix__notes-topic-list-item">
+                      <a href="" class="text-effect">China Mix</a>
+                    </li>
+                    <li class="remix__notes-topic-list-item">
+                      <a href="" class="text-effect">Electro House</a>
+                    </li>
+                    <li class="remix__notes-topic-list-item">
+                      <a href="" class="text-effect">Bass Căng</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="remix__notes-top">
+                  <h3 class="remix__notes-topic-title">NGHE NHIỀU NHẤT NĂM</h3>
+                  <ul class="remix__notes-top-list">
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">1</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect"> Em Là Kẻ Đáng Thương</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Phát Huy T4</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">2</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Khuất Lối</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >H-Kray</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">3</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Quả Phụ Tướng</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Dunghoangpham</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">4</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect"
+                            >Đừng Lo Nhé! Có Anh Đây</span
+                          >
+                          <span class="remix__notes-trend-introduce-author"
+                            >Thiên Tú</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">5</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Sao Cũng Được</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Thành Đạt</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">6</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Tòng Phu</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Keyo</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">7</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Cuối Cùng Thì</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Jack - J97</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">8</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Trót Trao Duyên</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >NB3 Hoài Bảo, CT</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">9</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect"
+                            >Rồi Ta Sẽ Ngắm Pháo Hoa Cùng Nhau</span
+                          >
+                          <span class="remix__notes-trend-introduce-author"
+                            >O.lew</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">10</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Ngày Mai Em Đi Mất</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Khải Đăng, Đạt G</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">11</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Cưới Hông Chốt Nha</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Út Nhị Mino, Đỗ Thành Duy, NH4T</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">12</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Người Em Từng Yêu</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Ngân Ngân</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">13</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Em Nên Dừng Lại</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Khang Việt</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">14</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Thuyền Quyên</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Diệu Kiên</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">15</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect"
+                            >Trót Trao Duyên (Remix)</span
+                          >
+                          <span class="remix__notes-trend-introduce-author"
+                            >NB3 Hoài Bảo, CT</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">16</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Ai Rồi Cũng Sẽ Khác</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Hà Nhi</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">17</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Waiting For You</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >MONO, Onionn</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">18</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect"
+                            >Lỡ Duyên Kiếp Này, Liệu Có Kiếp Sau</span
+                          >
+                          <span class="remix__notes-trend-introduce-author"
+                            >Khả Hiệp, ACV</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">19</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Kỳ Vọng Sai Lầm</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Tăng Phúc, Nguyễn Đình Vũ, Yuno Bigboi</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                    <li class="remix__notes-top-list-item">
+                      <div class="remix__notes-trend">
+                        <div class="remix__notes-trend-number">20</div>
+                        <a href="" class="remix__notes-trend-introduce">
+                          <span class="text-effect">Ân Tình Sang Trang</span>
+                          <span class="remix__notes-trend-introduce-author"
+                            >Châu Khải Phong, ACV</span
+                          >
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="countdown">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="countdown__body text-center">
+                <h2 class="countdown__body-title font-Rockville">
+                  Feel the music from the heart
+                </h2>
+                <p class="countdown__body-paragraph font-Now">CURRENT TIME</p>
+                <div class="countdown__body-time">
+                  <div class="countdown__body-time-item text-center">
+                    <h3 class="countdown__body-time-hours font-Rajdhani"></h3>
+                    <span class="font-Now">HOURS</span>
+                  </div>
+                  <div class="countdown__body-time-item text-center">
+                    <h3 class="countdown__body-time-minutes font-Rajdhani"></h3>
+                    <span class="font-Now">MINUTES</span>
+                  </div>
+                  <div class="countdown__body-time-item text-center">
+                    <h3 class="countdown__body-time-seconds font-Rajdhani"></h3>
+                    <span class="font-Now">SECONDS</span>
+                  </div>
+                </div>
+                <a
+                  href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                  target="_blank"
+                  class="countdown__body-contact font-Now"
+                >
+                  CONTACT ME
+                  <!-- https://preview.colorlib.com/#djoz -->
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="end">
+        <div class="container pd-xl-15">
+          <div class="row">
+            <div class="col-xl-3 col-md-6 col-sm-12">
+              <div class="end__body">
+                <ul class="end__body-list end__body--height">
+                  <li class="end__body-list-item">
+                    <div
+                      class="end__body-list-item-icon end__body-list-item-icon--spacing"
+                    >
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="end__body-list-item-info">
+                      <h3 class="font-Now">Phone</h3>
+                      <span class="font-Rajdhani">1-577-124-44227</span>
+                    </div>
+                  </li>
+                  <li class="end__body-list-item">
+                    <div
+                      class="end__body-list-item-icon end__body-list-item-icon--spacing"
+                    >
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="end__body-list-item-info">
+                      <h3 class="font-Now">Email</h3>
+                      <span class="font-Rajdhani"
+                        >hieu.td.63cntt@ntu.edu.vn</span
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 offset-xl-1 col-md-6 offset-md-none col-sm-12">
+              <div class="end__info text-center end__body--height">
+                <h3 class="font-Rajdhani">Đắc Hiếu</h3>
+                <ul class="end__info-list">
+                  <li class="end__info-list-item">
+                    <a
+                      class="end__body-list-item-icon"
+                      href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="end__info-list-item">
+                    <a
+                      class="end__body-list-item-icon"
+                      href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="end__info-list-item">
+                    <a
+                      class="end__body-list-item-icon"
+                      href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="end__info-list-item">
+                    <a
+                      class="end__body-list-item-icon"
+                      href="https://www.facebook.com/DacHieuNe.Hihi1/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-dribbble"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 offset-xl-1 col-md-6 offset-md-none col-sm-12">
+              <div class="end__contact">
+                <h3 class="font-Rajdhani">Stay With Me</h3>
+                <form action="">
+                  <div class="end__form">
+                    <input type="email" class="font-Now" placeholder="Email" />
+                    <button class="end__body-list-item-icon">
+                      <i class="fa-regular fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <div class="modal-elegant font-Varela">
+      <div class="modal-elegant__body">
+        <div class="modal-elegant__body-x">X</div>
+        <div class="modal-elegant__body-img"></div>
+        <div class="modal-elegant__body-wrap">
+          <h3 class="modal-elegant__body-note"></h3>
+          <p class="modal-elegant__body-message"></p>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="./src/utils/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".remix__body-slider").slick({
+          slidesToShow: 1,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          fade: true,
+          cssEase: "linear",
+        });
+        $(".remix__body-author-list").slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          responsive: [
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script src="src/pages/home.js" type="module"></script>
+  </body>
+</html>
